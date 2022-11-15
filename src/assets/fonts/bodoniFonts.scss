@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Bodoni';
+    src: url('BodoniClassic-CyrillicRoman.eot');
+    src: local('Bodoni Classic Cyrillic Roman'), local('BodoniClassic-CyrillicRoman'),
+        url('BodoniClassic-CyrillicRoman.eot?#iefix') format('embedded-opentype'),
+        url('BodoniClassic-CyrillicRoman.woff2') format('woff2'),
+        url('BodoniClassic-CyrillicRoman.woff') format('woff'),
+        url('BodoniClassic-CyrillicRoman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('BodoniClassicText-CyrillicBold.eot');
+    src: local('Bodoni Classic Text Cyrillic Bold'), local('BodoniClassicText-CyrillicBold'),
+        url('BodoniClassicText-CyrillicBold.eot?#iefix') format('embedded-opentype'),
+        url('BodoniClassicText-CyrillicBold.woff2') format('woff2'),
+        url('BodoniClassicText-CyrillicBold.woff') format('woff'),
+        url('BodoniClassicText-CyrillicBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('BodoniClassicText-CyrillicLight.eot');
+    src: local('Bodoni Classic Text Cyrillic Light'), local('BodoniClassicText-CyrillicLight'),
+        url('BodoniClassicText-CyrillicLight.eot?#iefix') format('embedded-opentype'),
+        url('BodoniClassicText-CyrillicLight.woff2') format('woff2'),
+        url('BodoniClassicText-CyrillicLight.woff') format('woff'),
+        url('BodoniClassicText-CyrillicLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('BodoniClassicText-CyrillicRoman.eot');
+    src: local('Bodoni Classic Text Cyrillic Roman'), local('BodoniClassicText-CyrillicRoman'),
+        url('BodoniClassicText-CyrillicRoman.eot?#iefix') format('embedded-opentype'),
+        url('BodoniClassicText-CyrillicRoman.woff2') format('woff2'),
+        url('BodoniClassicText-CyrillicRoman.woff') format('woff'),
+        url('BodoniClassicText-CyrillicRoman.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

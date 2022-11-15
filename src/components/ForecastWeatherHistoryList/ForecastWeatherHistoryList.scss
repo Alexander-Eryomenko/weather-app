@@ -1,0 +1,38 @@
+.weather-history {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 15px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__sub-title {
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__input-box {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    column-gap: 15px;
+  }
+  &__day-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    margin: 15px 0;
+    padding: 10px 15px;
+  }
+  &__day {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+  }
+}

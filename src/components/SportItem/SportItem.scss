@@ -1,0 +1,13 @@
+.sport-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #C09919 ;
+  border-radius: 15px;
+  width: 250px;
+  padding: 10px 10px;
+  &__text-content {
+    width: 85%;
+  }
+}

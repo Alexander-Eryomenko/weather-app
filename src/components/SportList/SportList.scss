@@ -1,0 +1,12 @@
+.sport-list {
+
+  &__item-container {
+    display: flex;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+}
+

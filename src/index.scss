@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bodoni Classic Text Cyrillic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-header-light {
+  background-color: #97aad1 !important;
+}
+
+.bg-header-dark {
+  background-color: #C09919 !important;
+}
+
+.bg-main-light {
+  background-color: #fff !important;
+}
+
+.bg-main-dark {
+  background-color: #0C1F51 !important;
+}
+
+.title-color-light {
+  color: #2a3f7a !important;
+}
+
+.title-color-dark {
+  color: #C09919 !important;
+}
+
+.sub-title-color-light {
+  color: #2a3f7a;
+}
+
+.sub-title-color-dark {
+  color: #C09919 !important;
+}
+
+.text-color-light {
+  color: #2a3f7a !important;
+}
+
+.text-color-dark {
+  color: #FFFFE0 !important;
+}
+
+.border-color-light {
+  border-color: #2a3f7a !important;
+}
+
+.border-color-dark {
+  border-color: #C09919 !important;
+}
+
+.title-fonts, .sub-title-fonts, .text-fonts, .count-fonts {
+  font-family: Bodoni !important;
+  font-size: 35px !important;
+  font-weight: 500 !important;
+}
+
+.sub-title-fonts {
+  font-size: 25px !important;
+}
+
+.text-fonts {
+  font-size: 18px !important;
+}

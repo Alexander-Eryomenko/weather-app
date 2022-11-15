@@ -1,0 +1,9 @@
+.forecast-weather-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 30px;
+  border: 2px solid #C09919;
+  border-radius: 15px;
+  padding: 15px 10px;
+}

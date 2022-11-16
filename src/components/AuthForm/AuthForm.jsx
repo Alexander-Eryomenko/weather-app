@@ -8,13 +8,17 @@ import {
 	TITLE_COLOR_DARK
 } from '../../constants/constantsTheme';
 
+import { selectAuthError } from '../../store/auth/selectors';
+
 import './AuthForm.scss';
+import {useSelector} from 'react-redux';
 
 const AuthForm = ({title, textBtn, submit}) => {
 	const emailRef = useRef();
 	const passwordRef = useRef();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const inputError = useSelector(selectAuthError);
 
 
 	const emailHandler = (event) => {
@@ -55,6 +59,7 @@ const AuthForm = ({title, textBtn, submit}) => {
 					error={false}
 					required
 					className="auth__input"
+					helperText={inputError}
 				/>
 				<TextField
 					id='password'

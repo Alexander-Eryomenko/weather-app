@@ -111,7 +111,8 @@ const Header = () => {
 			<div className="header__auth">
 				{isAuth && <div className="header__auth__email">{authEmail}</div>}
 				<AuthBtn
-					textBtn={isAuth ? 'Log Out' : 'Log In'}
+					textBtn={isAuth ?
+						<FormattedMessage id='logout_btn_text'/> : <FormattedMessage id='login_btn_text'/>}
 					authHandler={isAuth ? onLogOut : onLogIn }
 				/>
 			</div>

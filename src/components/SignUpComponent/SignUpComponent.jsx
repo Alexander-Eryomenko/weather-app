@@ -1,6 +1,9 @@
 import { fetchSignUpThunk } from '../../store/auth/thunks';
 import { useDispatch } from 'react-redux';
+
 import { Link } from 'react-router-dom';
+
+import { FormattedMessage } from 'react-intl';
 
 import AuthForm from '../AuthForm/AuthForm';
 
@@ -11,8 +14,11 @@ const SignInComponent = () => {
 	};
 	return(
 		<div>
-			<AuthForm title="Sign Up" textBtn="Sign Up" submit={signInHandler}/>
-			<Link to='/login'>If you have sign in, go to Login</Link>
+			<AuthForm
+				title={<FormattedMessage id='signUp_title'/>}
+				textBtn={<FormattedMessage id='signUp_btn'/>}
+				submit={signInHandler}/>
+			<Link to='/login'><FormattedMessage id='have_account_warning'/></Link>
 		</div>
 	);
 };

@@ -12,6 +12,7 @@ export const fetchLoginThunk = (email, password) => {
 	return async (dispatch) => {
 		dispatch(loginRequest());
 		const response = await loginService(email, password);
+		console.log('response in thunk', response);
 		if(response.success) {
 			dispatch(loginSuccess(response.user));
 		} else {

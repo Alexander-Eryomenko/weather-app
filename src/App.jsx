@@ -9,16 +9,19 @@ import { IntlProvider } from 'react-intl';
 import { selectTheme, selectLanguage } from './store/app/selectors';
 import { selectIsAuth } from './store/auth/selectors';
 
+import {
+    BG_MAIN_LIGHT,
+    BG_MAIN_DARK
+} from './constants/constantsTheme';
+
 import Login from './screens/Login/Login';
 import Register from './screens/SignUp/Register';
+import ForecastWeather from './screens/ForecastWeather/ForecastWeather';
+import WelcomePage from './screens/WelcomePage/WelcomePage';
 import ForecastWeatherHistory from './screens/ForecastWeatherHistory/ForecastWeatherHistory';
 import Header from './components/Header/Header';
 import WishList from './components/WishList/WishList';
-import ForecastWeather from './screens/ForecastWeather/ForecastWeather';
-
-import WelcomePage from './screens/WelcomePage/WelcomePage';
-
-import { BG_MAIN_LIGHT, BG_MAIN_DARK } from './constants/constantsTheme';
+import NotLogin from './components/NotLogin/NotLogin';
 
 import './App.scss';
 
@@ -70,7 +73,10 @@ function App() {
                 <main className='main'>
                     <Routes>
                         {isAuth && <Route exact path="/" element={<WelcomePage />}/>}
-                        {!isAuth && <Route exact path="/" element={<div>please log in or sign in</div>}/>}
+                        {!isAuth && <Route
+                            exact
+                            path="/"
+                            element={ <NotLogin /> }/>}
                         <Route path="/login" element={<Login />} />
                         <Route path="/sign-up" element={<Register />} />
                         <Route path="/weather-forecast" element={<ForecastWeather />} />

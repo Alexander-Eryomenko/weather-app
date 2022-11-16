@@ -42,7 +42,19 @@ export const messages = {
 		//Modal component
 		modal_title: 'Remove event',
 		modal_remove_btn: 'Remove',
-		modal_cancel_btn: 'Cancel'
+		modal_cancel_btn: 'Cancel',
+		//Auth form
+		login_title: 'Login',
+		signUp_title: 'Sign Up',
+		login_btn: 'Login',
+		signUp_btn: 'Sign Up',
+		no_account_warning: 'If you have no account, please create it now',
+		have_account_warning: 'If you have sign up, go to Login',
+		//Not login
+		not_login: 'Please login or sign up',
+		//Login btn header
+		login_btn_text: 'Log In',
+		logout_btn_text: 'Log Out'
 	},
 	[LOCALES.UKRAINE]: {
 		//Header
@@ -86,6 +98,18 @@ export const messages = {
 		//Modal component
 		modal_title: 'Видалити подію',
 		modal_remove_btn: 'Видалити',
-		modal_cancel_btn: 'Відмінити'
+		modal_cancel_btn: 'Відмінити',
+		//Auth form
+		login_title: 'Увійти',
+		signUp_title: 'Зареєструватись',
+		login_btn: 'Увійти',
+		signUp_btn: 'Реєстрація',
+		no_account_warning: 'Якщо в тебе немає акаунта, будь ласка зареєструйся',
+		have_account_warning: 'Якщо в тебе є акаунт, будь ласка увійди',
+		//Not login
+		not_login: 'Якщо в тебе є акаунт, будь ласка увійди або зареєструйся',
+		//Login btn header
+		login_btn_text: 'Увійти',
+		logout_btn_text: 'Вийти'
 	}
 };

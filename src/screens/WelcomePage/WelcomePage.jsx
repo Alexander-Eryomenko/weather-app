@@ -10,11 +10,12 @@ import { FormattedMessage } from 'react-intl';
 
 import { fetchWeatherThunk } from '../../store/forecastWeather/thunks';
 
-import { selectForecastWeatherData } from '../../store/forecastWeather/selectors';
+import { selectForecastWeatherData, selectForecastWeatherIsDataLoading } from '../../store/forecastWeather/selectors';
 
 import { useTheme } from '../../hooks/hooks';
 
 import WrapperMain from '../../components/WrapperMain/WrapperMain';
+import ProgressComponent from '../../components/ProgressComponent/ProgressComponent';
 
 import {
 	TEXT_COLOR_LIGHT,
@@ -29,6 +30,7 @@ const WelcomePage = () => {
 	const { current, location } = useSelector(selectForecastWeatherData);
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+	const isLoading = useSelector(selectForecastWeatherIsDataLoading);
 
 	useEffect(() => {
 		dispatch(fetchWeatherThunk());
@@ -44,44 +46,48 @@ const WelcomePage = () => {
 
 	const textColorTheme = useTheme(TEXT_COLOR_LIGHT, TEXT_COLOR_DARK);
 	return (
-		<WrapperMain classes="welcome-page">
-			<Box className="welcome-page__current-weather-box">
-				<div
-					className={`welcome-page__current-weather-box__current-temp ${textColorTheme}`}
-					>
+
+		<>
+			{isLoading && <ProgressComponent />}
+			<WrapperMain classes="welcome-page">
+				<Box className="welcome-page__current-weather-box">
+					{current?.temp_c && <div
+						className={`welcome-page__current-weather-box__current-temp ${textColorTheme}`}
+						>
 					{getRoundedNumber(current?.temp_c)}
-				</div>
-				<Box className="welcome-page__current-weather-box__current-temp2">
-					<div
-						color="black"
-						className={`welcome-page__current-weather-box__current-temp2 ${textColorTheme}`}
-					>
-						{location?.name}
-					</div>
-					<Box>
-						<img src={current?.condition.icon} alt=""/>
+						</div>}
+					<Box className="welcome-page__current-weather-box__current-temp2">
+						<div
+							color="black"
+							className={`welcome-page__current-weather-box__current-temp2 ${textColorTheme}`}
+						>
+							{location?.name}
+						</div>
+						<Box>
+							<img src={current?.condition.icon} alt=""/>
+						</Box>
 					</Box>
 				</Box>
-			</Box>
-			<Box className="welcome-page__links">
-				<Box className='welcome-page__links_weather' onClick={onClickWeatherForecastHandler}>
-					<div
-						className="welcome-page__links_title"
-					>
-						<FormattedMessage id='weather_button'/>
-					</div>
+				<Box className="welcome-page__links">
+					<Box className='welcome-page__links_weather' onClick={onClickWeatherForecastHandler}>
+						<div
+							className="welcome-page__links_title"
+						>
+							<FormattedMessage id='weather_button'/>
+						</div>
+					</Box>
+					<Box
+						className='welcome-page__links_history'
+						onClick={onClickWeatherForecastHistoryHandler}>
+						<div
+							className="welcome-page__links_title"
+						>
+							<FormattedMessage id='weather_history_btn'/>
+						</div>
+					</Box>
 				</Box>
-				<Box
-					className='welcome-page__links_history'
-					onClick={onClickWeatherForecastHistoryHandler}>
-					<div
-						className="welcome-page__links_title"
-					>
-						<FormattedMessage id='weather_history_btn'/>
-					</div>
-				</Box>
-			</Box>
-		</WrapperMain>
+			</WrapperMain>
+		</>
 	);
 };
 

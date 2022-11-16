@@ -1,4 +1,7 @@
 import { Button } from '@mui/material';
+
+import PropTypes from 'prop-types';
+
 import './AuthBtn.scss';
 
 const AuthBtn = ({textBtn, authHandler}) => {
@@ -15,6 +18,11 @@ const AuthBtn = ({textBtn, authHandler}) => {
 			</Button>
 		</div>
 	);
+};
+
+AuthBtn.propTypes = {
+	textBtn: PropTypes.object.isRequired,
+	authHandler: PropTypes.func.isRequired
 };
 
 export default AuthBtn;

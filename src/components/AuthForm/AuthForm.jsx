@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 
 import { TextField, Button } from '@mui/material';
 
+import PropTypes from 'prop-types';
+
 import { useTheme } from '../../hooks/hooks';
 import {
 	TITLE_COLOR_LIGHT,
@@ -81,6 +83,12 @@ const AuthForm = ({title, textBtn, submit}) => {
 			</form>
 		</div>
 	);
+};
+
+AuthForm.propTypes = {
+	title: PropTypes.object.isRequired,
+	textBtn: PropTypes.object.isRequired,
+	submit: PropTypes.func.isRequired
 };
 
 export default AuthForm;

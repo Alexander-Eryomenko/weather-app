@@ -14,7 +14,7 @@ const logger = state => next => action => {
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['sport', 'wishList', 'app']
+  whitelist: ['sport', 'wishList', 'app', 'auth']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
